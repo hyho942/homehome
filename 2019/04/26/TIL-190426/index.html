@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>TIL-190426 - Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="7일차 (0426) - 컴퓨터 공학Python - What I learn… 자료구조 Queue">
+<meta name="keywords" content="Developer skill blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL-190426">
+<meta property="og:url" content="https://hyho942.github.io/2019/04/26/TIL-190426/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="7일차 (0426) - 컴퓨터 공학Python - What I learn… 자료구조 Queue">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://hyho942.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-29T03:52:09.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TIL-190426">
+<meta name="twitter:description" content="7일차 (0426) - 컴퓨터 공학Python - What I learn… 자료구조 Queue">
+<meta name="twitter:image" content="https://hyho942.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/Hyun's_Logo.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="/link href=" https: fonts.googleapis.com css?family="Montserrat" ">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Hyun's_Logo.png" alt="TIL-190426" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/hyho942">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-26T01:27:07.000Z">2019-04-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 minutes read (About 839 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                TIL-190426
+            
+        </h1>
+        <div class="content">
+            <h2 id="7일차-0426-컴퓨터-공학"><a href="#7일차-0426-컴퓨터-공학" class="headerlink" title="7일차 (0426) - 컴퓨터 공학"></a>7일차 (0426) - 컴퓨터 공학</h2><h3 id="Python-What-I-learn…"><a href="#Python-What-I-learn…" class="headerlink" title="Python - What I learn…"></a>Python - What I learn…</h3><ul>
+<li>자료구조</li>
+<li><p>Queue</p>
+<a id="more"></a>
+</li>
+</ul>
+<h3 id="ADT-abstract-data-type-추상-자료형"><a href="#ADT-abstract-data-type-추상-자료형" class="headerlink" title="ADT (abstract data type) 추상 자료형"></a>ADT (abstract data type) 추상 자료형</h3><ul>
+<li>구체적인 구현 설명을 언급하지 않는, 순수하게 기능을 나열한 것을 말한다.</li>
+<li>자료구조(연결리스트, 스택, 큐 등) 의 인터페이스(함수 시그니처),오퍼레이션을 명시해 놓은 것이다.<br><br>= 자료구조의 함수 사용법을 나타냄.</li>
+</ul>
+<ol>
+<li>배열</li>
+<li>연결구조 (어뎁터)</li>
+<li><p>파이썬의 리스트</p>
+</li>
+<li><p>S.empty() -&gt; Boolean<br>스택이 비어있으면 true, 아니면 falses</p>
+</li>
+<li>S.push(data) -&gt; None<br>스택이 맨 위에 데이터를 쌓는다</li>
+<li>S.pop() -&gt; data<br>스택 맨 위의 데이터를 삭제하면서 반환</li>
+<li>S.peek() -&gt; data<br>스택 맨 위 데이터를 반환</li>
+</ol>
+<h3 id="Queue-큐-Q-gt-자료구조"><a href="#Queue-큐-Q-gt-자료구조" class="headerlink" title="Queue 큐 \ (Q &gt; 자료구조)"></a>Queue 큐 \ (Q &gt; 자료구조)</h3><p>FIFO(First-In-First-Out) 방식으로 스택과 반대로 먼저 저장된 값이 제일 먼저 나온다. 즉 가장 최근에 저장된 값은 가장 먼저 나오게된다.<br><br>EX) 1,2,3 -&gt; 3,2,1</p>
+<ul>
+<li>Q.empty() -&gt; Boolean<br><br> - 큐가 비어 있을 때에 true를, 아니면 false 반환한다.</li>
+<li>Q.enqueue -&gt; None<br><br> - 큐의 맨 뒤에 데이터를 쌓는다.</li>
+<li>Q.dequeue -&gt; data<br><br> - 큐 맨 앞의 데이터를 삭제하면서 반환</li>
+<li>Q.peek -&gt; data<br><br> - 큐에서 가장 위(앞)에 있는 데이터을 반환한다.</li>
+</ul>
+<ul>
+<li>add(item): item을 리스트의 끝부분에 추가한다.</li>
+<li>remove(): 리스트의 첫 번째 항목을 제거한다.</li>
+</ul>
+<h3 id="Linked-list-연결-리스트"><a href="#Linked-list-연결-리스트" class="headerlink" title="Linked list 연결 리스트"></a>Linked list 연결 리스트</h3><p>노드를 단위를 한다. 노드는 데이터와 다음 노드를 가리키는 참조값으로 구성되어 있다.</p>
+<h4 id="Sigle-linked-list"><a href="#Sigle-linked-list" class="headerlink" title="Sigle linked list"></a>Sigle linked list</h4><p>= 이전 데이터로 접근을 할 수 없다.</p>
+<h5 id="Operations"><a href="#Operations" class="headerlink" title="Operations"></a>Operations</h5><ol>
+<li>S.empty() -&gt; Boolean<br><br> - 리스트가 비었다면 true, 아니면 false</li>
+<li>S.size() -&gt; None<br><br> - 리스트에 있는 요소 개수</li>
+<li>S.add() -&gt; None<br><br> - 노드를 리스트의 맨 앞에 추가</li>
+<li>S.search(target) -&gt; Node<br><br> - 리스트에서 target을 찾는다<br><br> - 찾으면 노드를, 못 찾으면 None 반환</li>
+<li>S.delete() -&gt; None<br><br> - 맨 앞 노드를 삭제</li>
+</ol>
+<h4 id="Double-linked-list"><a href="#Double-linked-list" class="headerlink" title="Double linked list"></a>Double linked list</h4><p><br> = Dummy double linked list (이중 연결 리스트)<br><br> = 데이터를 가지지 않은 노드<br><br> = 구현 편의성이 높아진다.</p>
+<h5 id="Operations-1"><a href="#Operations-1" class="headerlink" title="Operations"></a>Operations</h5><p>구조</p>
+<ol>
+<li>Head – 리스트 맨 앞에 있는 더미</li>
+<li>Tail – 리스트 맨 뒤에 있는 더미를 가리킨다.</li>
+<li>d-size – 리스트의 요소 개수</li>
+</ol>
+<p>Operations</p>
+<ol>
+<li><p>S.empty() -&gt; Boolean -리스트가 비었다면 True,아니면 False</p>
+</li>
+<li><p>S.size() -&gt; integer -리스트에 있는 요소 개수</p>
+</li>
+<li><p>Insert 계열</p>
+</li>
+</ol>
+<p>공부 리스트<br>순회 (traversal)</p>
+<p>배열<br>1|2|3|4|5|6</p>
+<ul>
+<li>장점) 검색이 빠르다 -&gt; 인덱싱O(1)</li>
+<li>단점) Insert =&gt; delete O(n)</li>
+</ul>
+<p>연결리스트<br>1-2-3-4-5-6</p>
+<ul>
+<li>장점) 검색이 느리다O(n)</li>
+<li>단점) Insert =&gt; delete O(1)</li>
+</ul>
+<p>성형 자료구조<br>Linked list<br>Stack<br>Queue<br>비선형 자료구조<br>Tree</p>
+<ol>
+<li>순회(traversal)<br>a. 전위 (preorder)<br>b. 중위 (in order)<br>c. 후위 (post order)<br>a,b,c, = stack =&gt; DES<br>d. 레벨순서 (level order)</li>
+<li><p>BST (binary search tree)<br>O(n^2) -&gt; search</p>
+</li>
+<li><p>균형 이진 트리(balanced, self balanced)<br>a. AVL. 트리<br>b. RED-black 트리</p>
+</li>
+<li>B-tree (데이터베이스 인덱스)<br>균형 이진트리+ …아키텍쳐</li>
+<li>Heap (완전 이진트리, 배열)</li>
+</ol>
+<p>Hash tree (map)</p>
+<ol>
+<li>Hash function</li>
+<li>collision (충돌)<br>a. chaining (체이닝)<br>b. open – addressing 기법</li>
+</ol>
+<p>graph (그래프)</p>
+<ol>
+<li>순회 (travelsal)<br>a. DFS – 깊이를 우선 탐색 -&gt; 스택<br>b. BFS – 너비 우선 탐색 -&gt; Queue</li>
+<li>MST<br>(최소 신장 트리)<br>Minimum spanning tree-&gt;greedy algorithm<br>-krusskal algorithm<br>-prim algorithm</li>
+<li>최단경로 문제<br>(shortist path)</li>
+<li>Dijksta algorithm<br>-greedy algorithm 2. bellmam-ford algorithm 3. flord-warshall algorithm<br>-dynamic programming</li>
+</ol>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/29/TIL-190429/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">TIL-190429</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/25/TIL-190425/">
+                <span class="level-item">TIL-190425</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/Hyun&#39;s_Logo.png" alt="HYUN HO LEE">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        HYUN HO LEE
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Hyho
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Seoul</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        62
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tag
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        1
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/hyho942" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/hyho942">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/lees.white.story">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hyho.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">UX Design Portfolio</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hyho.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://hyunholee90.gitbook.io/hyho/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">GitBook Tech BLog (Eng)</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hyunholee90.gitbook.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm-Study/">
+            <span class="level-start">
+                <span class="level-item">Algorithm Study</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Project/">
+            <span class="level-start">
+                <span class="level-item">Project</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Project/drunk-code-협업-Project/">
+            <span class="level-start">
+                <span class="level-item">drunk_code 협업 Project</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/TIL/">
+            <span class="level-start">
+                <span class="level-item">TIL</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">58</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/html-web/" style="font-size: 10px;">html, web</a>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/06/TIL-190606/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190606">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-06T04:27:33.000Z">2019-06-06</time></div>
+                    <a href="/2019/06/06/TIL-190606/" class="has-link-black-ter is-size-6">TIL-190606</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/05/TIL-190605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190605">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-05T04:19:35.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/TIL-190605/" class="has-link-black-ter is-size-6">TIL-190605</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/04/TIL-190604/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190604">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T01:19:51.000Z">2019-06-04</time></div>
+                    <a href="/2019/06/04/TIL-190604/" class="has-link-black-ter is-size-6">TIL-190604</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/03/TIL-190603/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190603">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-03T09:39:53.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/TIL-190603/" class="has-link-black-ter is-size-6">TIL-190603</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/02/TIL-190602/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190602">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T07:02:41.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/TIL-190602/" class="has-link-black-ter is-size-6">TIL-190602</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/html-web/">
+                        <span class="tag">html, web</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Hyun's_Logo.png" alt="TIL-190426" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 HYUN HO LEE&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

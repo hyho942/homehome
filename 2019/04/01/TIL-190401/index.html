@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>TIL_190401 - Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="1일차(0401) - HTML/CSSHTML/CSS - What I learn… html의 기본 구조 시맨틱 마크업 박스 모델">
+<meta name="keywords" content="html, web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL_190401">
+<meta property="og:url" content="https://hyho942.github.io/2019/04/01/TIL-190401/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1일차(0401) - HTML/CSSHTML/CSS - What I learn… html의 기본 구조 시맨틱 마크업 박스 모델">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://hyho942.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-25T12:09:06.226Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TIL_190401">
+<meta name="twitter:description" content="1일차(0401) - HTML/CSSHTML/CSS - What I learn… html의 기본 구조 시맨틱 마크업 박스 모델">
+<meta name="twitter:image" content="https://hyho942.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/Hyun's_Logo.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="/link href=" https: fonts.googleapis.com css?family="Montserrat" ">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Hyun's_Logo.png" alt="TIL_190401" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/hyho942">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-01T11:09:23.000Z">2019-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes read (About 1140 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                TIL_190401
+            
+        </h1>
+        <div class="content">
+            <h2 id="1일차-0401-HTML-CSS"><a href="#1일차-0401-HTML-CSS" class="headerlink" title="1일차(0401) - HTML/CSS"></a>1일차(0401) - HTML/CSS</h2><h3 id="HTML-CSS-What-I-learn…"><a href="#HTML-CSS-What-I-learn…" class="headerlink" title="HTML/CSS - What I learn…"></a>HTML/CSS - What I learn…</h3><ul>
+<li>html의 기본 구조</li>
+<li>시맨틱 마크업</li>
+<li><p>박스 모델</p>
+<a id="more"></a>
+</li>
+</ul>
+<h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><p>XML은 Extensible Markup Language의 약자이며, W3C에서 개발된 표준 권고안 마크업 언어이다. XML은 데이터를 저장하고 전달할 목적으로만 만들어졌습니다. HTML과 다르게 미리 정의되어 있는 구조가 아닌, 사용자가 직접 정의해서 사용할 수 있습니다.</p>
+<h3 id="HTML-4-01-vs-HTML-5-0"><a href="#HTML-4-01-vs-HTML-5-0" class="headerlink" title="HTML 4.01 vs HTML 5.0"></a>HTML 4.01 vs HTML 5.0</h3><h3 id="WHATWG"><a href="#WHATWG" class="headerlink" title="WHATWG"></a>WHATWG</h3><p>Web Hypertext Application Technology Working Group의 약자로 인터넷이 보급화 되면서, 무분별한 웹 형식과 액티브 X같은 플러그인으로 인해 웹 페이지가 무거워 졌습니다. 그래서 W3C에서 제안한 표준안으로 만들어진 그룹이다.</p>
+<h3 id="HTML-기본-구조"><a href="#HTML-기본-구조" class="headerlink" title="HTML 기본 구조"></a>HTML 기본 구조</h3><p>3단 Structure</p>
+<pre>
+< html >
+  < head >
+    < /head >
+  < body >
+      (content)
+    < /body >
+  < footer >
+    < /footer >
+< /html >
+</pre>
+
+<p>4단 Structure</p>
+<pre>
+< html >
+  < head > 
+    < /head >
+  < nav > 
+    < /nav >
+  < body >
+    (content)
+    < /body >
+  < footer > 
+    < /footer >
+< /html >
+</pre>
+
+<h3 id="선형화-단계-Linearization-Step"><a href="#선형화-단계-Linearization-Step" class="headerlink" title="선형화 단계 (Linearization Step)"></a>선형화 단계 (Linearization Step)</h3><p>논리적으로 HTML을 구성하기 위해 마크업은 규칙에 따라 콘텐츠를 설계하는 단계이다. 선형화 단계를 거치면 전체적은 웹 페이지에 구성을 보기 쉽게 정리할 수 있고, CSS 작업시 좀더 간결한 작업을 할 수 있다.</p>
+<h3 id="시맨틱-요소-Semantic-Element"><a href="#시맨틱-요소-Semantic-Element" class="headerlink" title="시맨틱 요소 (Semantic Element)"></a>시맨틱 요소 (Semantic Element)</h3><h5 id="lt-header-gt"><a href="#lt-header-gt" class="headerlink" title="&lt; header &gt;"></a>&lt; header &gt;</h5><pre><code>&lt;div id=”header”&gt;
+&lt;header class=&quot;header&quot;&gt;
+</code></pre><p>header는 html 문서에 첫 머리말로 사용이 가능하여 여러번 사용이 가능하다. 즉 section, body 안에 header을 사용하여 구분을 짓기 위해 사용이 가능하다.</p>
+<h5 id="lt-footer-gt"><a href="#lt-footer-gt" class="headerlink" title="&lt; footer &gt;"></a>&lt; footer &gt;</h5><pre><code>&lt;div id=&quot;footer&quot;&gt;
+&lt;footer class=&quot;footer&quot;&gt;
+</code></pre><p>Webpage의 Copyright이나 회사 주소 정보를 사용 할 수 있다.<br>section에 꼬리말로 사용하고 html 내에서 다수 사용이 가능하다.</p>
+<h5 id="lt-section-gt"><a href="#lt-section-gt" class="headerlink" title="&lt; section &gt;"></a>&lt; section &gt;</h5><pre><code>&lt;div id=&quot;section&quot; class=&quot;section&quot;&gt;&lt;/div&gt;
+&lt;section id=&quot;#&quot; class=&quot;#&quot;&gt;&lt;/section&gt;
+</code></pre><p>콘텐츠를 grouping 할 때 사용. Section 안에 section을 사용 할 수 있어서 중첩 사용이 가능하다.</p>
+<h5 id="lt-nav-gt"><a href="#lt-nav-gt" class="headerlink" title="&lt; nav &gt;"></a>&lt; nav &gt;</h5><pre><code>&lt;div id=&quot;nav&quot; class=&quot;nav&quot;&gt;&lt;/div&gt;
+&lt;nav id=&quot;#&quot; class=&quot;#&quot;&gt;&lt;/nav&gt;
+</code></pre><p>Navigation의 줄임말. navigation 메뉴를 나타낸다. 주로 헤딩 부분에 사용하지만, body 내부에 navigation 섹션에도 사용이 가능하다.</p>
+<h5 id="lt-article-gt"><a href="#lt-article-gt" class="headerlink" title="&lt; article &gt;"></a>&lt; article &gt;</h5><pre><code>&lt;div id=&quot;article&quot; class=&quot;article&quot;&gt;&lt;/div&gt;
+&lt;article id=&quot;#&quot; class=&quot;#&quot;&gt;&lt;/article&gt;
+</code></pre><p>독립적인 글들을 나타낼 때 사용. 블로그 포스팅 표현 할 때 사용하지만, RSS feed로 배포할 가치가 있는 컨텐츠에 사용한다.</p>
+<h5 id="lt-aside-gt"><a href="#lt-aside-gt" class="headerlink" title="&lt; aside &gt;"></a>&lt; aside &gt;</h5><pre><code>&lt;div id=&quot;aside&quot; class=&quot;aside&quot;&gt;&lt;/div&gt;
+&lt;aside id=&quot;#&quot; class=&quot;#&quot;&gt;&lt;/aside&gt;
+</code></pre><p>콘텐츠와 관계 있는 부가 정보들을 표시 할 때 사용한다. 주로 side-bar콘텐츠들을 담기 위해 사용하기도 한다.</p>
+<h5 id="lt-main-gt"><a href="#lt-main-gt" class="headerlink" title="&lt; main &gt;"></a>&lt; main &gt;</h5><pre><code>&lt;div id=&quot;main&quot; class=&quot;main&quot;&gt;&lt;/div&gt;
+&lt;main id=&quot;#&quot; class=&quot;#&quot;&gt;&lt;/main&gt;
+</code></pre><p>주로 웹 페이지를 구성하는 메인 콘텐츠를 담는 태그이다. body 태그를 사용하여 구분할 수 있다.</p>
+<h3 id="HTML-네이밍"><a href="#HTML-네이밍" class="headerlink" title="HTML 네이밍"></a>HTML 네이밍</h3><h4 id="selector"><a href="#selector" class="headerlink" title="- [selector]"></a>- [selector]</h4><ul>
+<li><p>id<br>스타일을 지정할 때 한 가지만 지정해서 사용한다. ( # selector)<br>하나의 문서에 고유한 id 하나밖에 쓸 수 없다.</p>
+</li>
+<li><p>class<br>그룹으로 묶어서 스타일을 지정할 때 사용한다. ( . selector)</p>
+<p>| id / class는 숫자로 시작해서는 안된다.|</p>
+</li>
+</ul>
+<h4 id="Naming-convention"><a href="#Naming-convention" class="headerlink" title="- [Naming convention]"></a>- [Naming convention]</h4><ul>
+<li>식별자의 명칭이 되는 문자열에 방식을 결정하기 위한 규칙.</li>
+<li>가독성, 시인성, 효울성에 목적을 가진다.</li>
+<li>프로젝트, 프로그래밍 언어, 개발도구에 따라 방식을 결정한다.</li>
+</ul>
+<h4 id="Coding-Conventions"><a href="#Coding-Conventions" class="headerlink" title="- [Coding Conventions]"></a>- [Coding Conventions]</h4><ul>
+<li>프로그래밍 스타일에 관한 가이드 라인 모음.</li>
+</ul>
+<h4 id="표기법"><a href="#표기법" class="headerlink" title="- [표기법]"></a>- [표기법]</h4><ul>
+<li><p>카멜 표기법 / “camel<b>C</b>ase”</p>
+<ul>
+<li>각 단어의 첫문자는 대문자로 표기. 단 맨 처음 단어는 소문자로 시작.(띄어쓰기 대신 대문자로 구문함)</li>
+</ul>
+</li>
+<li><p>파스칼 표기법 / “<b>P</b>ascal<b>C</b>ase”</p>
+<ul>
+<li>모든 단어의 첫문자를 대문자로 시작.</li>
+</ul>
+</li>
+<li><p>스네이크 표기법 / “snake_case”</p>
+<ul>
+<li>단어를 밑줄문자로 구분하는 표기법<ul>
+<li>Perl, PHP, Python, Ruby, Rust 언어는 주로 스네이크 표기법을 사용한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>헝가리언 표기법 / “<b>str</b>Hungarian”</p>
+<ul>
+<li>접두어를 사용하는 표기법</li>
+<li>접두어 예시<ul>
+<li>b / 불리언 (boolean)</li>
+<li>ch / 문자 (char)</li>
+<li>f / float</li>
+<li>sz / NULL로 끝나는 문자열 (string+zero)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="WAI-ARIA"><a href="#WAI-ARIA" class="headerlink" title="WAI-ARIA"></a>WAI-ARIA</h3><h4 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h4><p>Web Accessibility Initiative-Accessible Rich Internet Applications.<br>WAI-ARIA는 접근성 및 상호 운용성을 향상시키기 위해 마크업에 역할 (Role), 속성 (Property), 상태 (State) 추가하여 스크린리더 및 음성지원 보조기기 사용을 용이하게 해준다.</p>
+<h3 id="CSS-Box-model"><a href="#CSS-Box-model" class="headerlink" title="CSS - Box model"></a>CSS - Box model</h3><p>박스 앨리먼트의 hight와 width로 사각형 박스 모양을 가지고 있다. 박스 모델은 마진(margin), 패딩(padding), 보더(border)로 구성되어 있다.</p>
+<h4 id="normal-flow"><a href="#normal-flow" class="headerlink" title="normal flow"></a>normal flow</h4><p>일반적인 상황에서 각각의 요소들이 배치되는 순서를 뜻하는 말로서 기본 페이지 레이아웃에서 블록요소들은 기본적으로 상하 배치된다.</p>
+<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h4><h4 id="float"><a href="#float" class="headerlink" title="float"></a>float</h4><h4 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h4><h3 id="Pseudo-Element-가상요소"><a href="#Pseudo-Element-가상요소" class="headerlink" title="Pseudo-Element(가상요소)"></a>Pseudo-Element(가상요소)</h3><h4 id="before-after-hover"><a href="#before-after-hover" class="headerlink" title="::before, ::after, :hover"></a>::before, ::after, :hover</h4>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/html-web/">html, web</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/02/TIL-190402/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">TIL-190402</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/Hyun&#39;s_Logo.png" alt="HYUN HO LEE">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        HYUN HO LEE
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Hyho
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Seoul</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        62
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tag
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        1
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/hyho942" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/hyho942">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/lees.white.story">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hyho.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">UX Design Portfolio</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hyho.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://hyunholee90.gitbook.io/hyho/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">GitBook Tech BLog (Eng)</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hyunholee90.gitbook.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm-Study/">
+            <span class="level-start">
+                <span class="level-item">Algorithm Study</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Project/">
+            <span class="level-start">
+                <span class="level-item">Project</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Project/drunk-code-협업-Project/">
+            <span class="level-start">
+                <span class="level-item">drunk_code 협업 Project</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/TIL/">
+            <span class="level-start">
+                <span class="level-item">TIL</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">58</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/html-web/" style="font-size: 10px;">html, web</a>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/06/TIL-190606/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190606">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-06T04:27:33.000Z">2019-06-06</time></div>
+                    <a href="/2019/06/06/TIL-190606/" class="has-link-black-ter is-size-6">TIL-190606</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/05/TIL-190605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190605">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-05T04:19:35.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/TIL-190605/" class="has-link-black-ter is-size-6">TIL-190605</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/04/TIL-190604/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190604">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T01:19:51.000Z">2019-06-04</time></div>
+                    <a href="/2019/06/04/TIL-190604/" class="has-link-black-ter is-size-6">TIL-190604</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/03/TIL-190603/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190603">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-03T09:39:53.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/TIL-190603/" class="has-link-black-ter is-size-6">TIL-190603</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/02/TIL-190602/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TIL-190602">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T07:02:41.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/TIL-190602/" class="has-link-black-ter is-size-6">TIL-190602</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/html-web/">
+                        <span class="tag">html, web</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Hyun's_Logo.png" alt="TIL_190401" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 HYUN HO LEE&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
